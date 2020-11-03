@@ -8,26 +8,32 @@
 <body>
     <form action="http://www.google.com">
     <h1>Register</h1>
-    <label for="q">First Name:</label>
-    <input id="q" name="First Name" type="Name" required>
-    <label for="q">Last Name:</label>
-    <input id="q" name="Last Name:" type="Surname" required>
+    <label for="first-name">First Name:</label>
+    <input type="text" name="first-name" id="first-name" placeholder="John" required />
+    <label for="last-name">Last Name:</label>
+    <input type="text" name="last-name" id="last-name" placeholder="Smith" required />
+
     <br>
-    <label for="Male"></label> Male</label>
+    
+    <label for="Male"> Male</label>
     <input id="Male" name="Gender" type="radio" value="Male">
     <label for="Female"> Female</label>
     <input id="Female" name="Gender" type="radio" value="Female">
     <label for="Other"> Other</label>
     <input id="Other" name="Gender" type="radio" value="Other">
-    <br>
-    <label for="q">E-mail:</label>
-    <input id="q" name="E-mail" type="email" required>
-    <label for="q">Password:</label>
-    <input id="q" name="Password:" type="password" minlength="5" maxlength="10" required>
+
     <br>
 
+    <label for="q">E-mail:</label>
+    <input id="q" name="E-mail" type="email" required>
+    <label for="password">Password:</label>
+    <input id="password" name="Password:" minlength="5" maxlength="10" placeholder="password" required>
+    <br>
+
+
+
     <label for="Month"> Birthday:</label>
-    <select name="Month">
+    <select name="Month" id="Month">
         <option value="Jan"> January</option>
         <option value="Feb">February</option>
         <option value="Mar">March</option>
@@ -45,7 +51,7 @@
         <option value="1999">1999</option>
     </select>
     <br>
-    <label for="T&C">I agree to the terms and conditions</label>
+    <label for="TermsAndConditions">I agree to the terms and conditions</label>
     <input id="TermsAndConditions" type="checkbox" name="TermsAndConditions" value="accepted">
     <br><br>
 

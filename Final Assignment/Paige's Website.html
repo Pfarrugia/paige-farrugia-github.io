@@ -4,82 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paige's Website</title>
-    <link rel="stylesheet" href="Website.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
     integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="Website.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Montserrat?preview.text=Paige%20Farrugia&preview.text_type=custom">
+
 </head>
 <body>
-    <div class="Title ">
-    <h1> Paige Farrugia</h1>
-            <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg navbar-light bg-white">
-              <div class="container-fluid">
-                <button
-                  class="navbar-toggler"
-                  type="button"
-                  data-mdb-toggle="collapse"
-                  data-mdb-target="#navbarExample01"
-                  aria-controls="navbarExample01"
-                  aria-expanded="false"
-                  aria-label="Toggle navigation">
-                  <i class="fas fa-bars"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarExample01">
-                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item active">
-                      <a class="nav-link" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#">Work</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </nav>
-            <!-- Navbar -->
-        
-      
-        <!-- Background image -->
-        <div class="carousel text-center bg-image">
-            <div class="carousel-active">
-                <div id="carousel-caption" class="carousel slide" data-bs-ride="carousel">
-                  <ol class="carousel-indicators">
-                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
-                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
-                    <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
-                  </ol>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active">
-                      <img src="Img1.JPG" class="d-block w-100 height-50px" alt="img1">
-                      <div class="CTA justify-content-center align-items-center">
-                        <div class="text-white">
-                          <h1 class="mb-3">Welcome!</h1>
-                          <a class="btn btn-outline-light btn-lg" href="#!" role="button">Explore my Work</a>
-                        </div>
-                      </div>
-                    </div>
-                      
-                  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </a>
-                  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </a>
-                </div>
+    <header>
+      <div class="logo"> Paige Farrugia</div>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <ul class="navbar-nav me-auto mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" aria-current="page" href="Paige's Website.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="work.html">Work</a>
+              </li>
+            </ul>
+        </nav>
+        <!-- Navbar -->
+    </header>
+      <main>
+          <!-- main carousel: https://kenwheeler.github.io/slick/-->
+          <div class="main-image-container">
+            <div class="main-message justify-content-center align-items-center">
+              <div class="text-white">
+                <h1 class="mb-3">Welcome!</h1>
+                <a class="btn btn-outline-light btn-lg " href="work.html" role="button">Explore my Work</a>
               </div>
             </div>
+            <div class="main-carousel">
+              <div class="slide" style="background-image: url(images/Img53.jpg);"></div>
+              <div class="slide" style="background-image: url(images/Img50.jpg);"></div>
+              <div class="slide" style="background-image: url(images/Img49.jpg);"></div>
+              <div class="slide" style="background-image: url(images/Img57.jpg);"></div>
+            </div>
           </div>
-                <!-- Background image -->
-      </header>
+          <!-- main carousel -->
+          <!-- work grid -->
+          <div class="portfolio-work-list">
+              <div class="portfolio-item">
+                <div class="media-thumbnail" style="background-image: url(images/Home/Img25.jpg);"></div>
+                <div class="item-description">
+                    <p>Radiohead Illustration</p>
+                    <p>Ink on Paper</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <div class="media-thumbnail" style="background-image: url(images/Home/Img50.jpg);"></div>
+                <div class="item-description">
+                    <p>Street Photography</p>
+                    <p>Digital Camera</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <div class="media-thumbnail" style="background-image: url(images/Home/Img12.png);"></div>
+                <div class="item-description">
+                    <p>Book cover</p>
+                    <p>Digital Illustration</p>
+                </div>
+              </div>
+              <div class="portfolio-item">
+                <div class="media-thumbnail" style="background-image: url(images/Home/Img37.jpg);"></div>
+                <div class="item-description">
+                    <p>Street Photography</p>
+                    <p>Film Camera</p>
+                </div>
+              </div>
+              
+          </div>
+      </main>
 
+      <footer>
+        <!-- social media links -->
+      </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+      <!-- https://cdnjs.com/libraries/-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+          $('.main-carousel').slick({
+            dots: true,
+            arrows: true, 
+            // autoplay: true
+          });
+        });
+    </script>
 </body>
 </html>
 

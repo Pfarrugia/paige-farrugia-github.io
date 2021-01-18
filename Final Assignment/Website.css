@@ -1,35 +1,83 @@
-.container-fluid{
-    padding-left:0px;
-    padding-right:0px;
+.logo {
+    font-family: "Montserrat", sans-serif;
+  }
+
+header {
+    padding: 24px;
+    text-align: center;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar{
+    text-align: center;
+}
+
+.navbar ul {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.main-carousel .slide{
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.main-image-container {
     position: relative;
-    display: block;
-    
-
 }
-.Title{
-    margin: 0;
-    padding:0;
-    text-align: Top;
+
+.main-message {
     position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 99;
+    height: fit-content;
+    width: fit-content;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
 }
 
-.CTA{
-    margin: 0;
-    padding:0;
-    text-align: Top;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translateX(-50%) translateY(-50%);
+.slick-arrow.slick-prev {
+    left: 16px;
+    z-index: 99;
 }
 
-.text-white btn{
-padding: 50px;
+.slick-arrow.slick-next {
+    right: 16px;
 }
 
+.logo{
+    font-size: 40px;
+}
+
+.portfolio-work-list {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.portfolio-item {
+    width: 200px;
+}
+
+.item-description {
+    text-align: center;
+}
+
+.media-thumbnail {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+}
 
 .carousel-caption {
     position: absolute;
@@ -39,6 +87,7 @@ padding: 50px;
     z-index: 20;
     color: white;
     text-shadow: 0 1px 2px rgba(0,0,0,.6);
+    font-family: "Montserrat", sans-serif;
   }
 
  .carousel-item{
@@ -53,4 +102,30 @@ padding: 50px;
 
 .carousel-inner-btn{
     padding:100px;
+    
+}
+
+.text{
+    padding:100px;
+    padding-top: 0px;
+    padding-bottom:50px
+}
+
+.h1{
+    font-family: "Montserrat", sans-serif;
+    padding:100px;
+    padding-bottom: 20px;
+}
+
+.form{
+    padding:100px;
+    padding-top:50px;
+    padding-bottom: 100px;
+}
+/*Media query for desktop styles*/
+@media screen and (min-width: 768px) {
+    .navbar{
+        max-width: 40%;
+        margin: 16px auto 0;
+    }
 }

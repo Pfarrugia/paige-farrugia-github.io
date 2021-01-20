@@ -324,7 +324,7 @@ input[type=Submit]:hover {
       }
       
       /* Modal Content */
-      .modal-content {
+      .mymodal.modal-content {
         position: relative;
         background-color: #fefefe;
         margin: auto;

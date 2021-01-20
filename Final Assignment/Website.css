@@ -19,6 +19,35 @@ header {
     justify-content: space-evenly;
 }
 
+.navbar li {
+    position: relative; 
+}
+
+.navbar li.active {
+    font-weight: bold;
+}
+
+.navbar li.active .nav-link { 
+    color: black;
+}
+
+.navbar li.active .nav-link:hover { 
+    color: black;
+}
+
+.navbar li.active:after {
+    content: "";
+    height: 2px;
+    background-color: black;
+    width: 16px;
+    position: absolute; 
+    bottom: 4px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+
 .main-carousel .slide{
     height: 500px;
     background-repeat: no-repeat;
@@ -28,6 +57,17 @@ header {
 
 .main-image-container {
     position: relative;
+}
+
+.main-image-container .overlay{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    margin: auto; 
+    z-index: 98;
 }
 
 .main-message {
@@ -45,12 +85,39 @@ header {
 }
 
 .slick-arrow.slick-prev {
-    left: 16px;
-    z-index: 99;
+    left: 24px;
+    z-index: 100;
 }
 
 .slick-arrow.slick-next {
-    right: 16px;
+    right: 24px;
+    z-index: 100;
+}
+
+.slick-arrow.slick-next:before,  .slick-arrow.slick-prev:before {
+    font-size: 24px;
+}
+
+.slick-dots {
+    bottom: 16px;
+    z-index: 999;
+}
+
+.slick-dots li {
+    height: 4px;    
+}
+
+.slick-dots li button{
+    height: fit-content;
+    padding: 0;
+}
+
+.slick-dots li button:before{
+    content: ' ';
+    background-color: #F5F8FA;
+    height: 4px;
+    border-radius: 4px; 
+    width: 24px;
 }
 
 .logo{
@@ -62,10 +129,25 @@ header {
     justify-content: space-between;
     padding: 32px;
     font-family: "Montserrat", sans-serif;
+    max-width: 80%;
+    margin: 0 auto;
 }
 
 .portfolio-item {
     width: 200px;
+    cursor: pointer; 
+}
+
+.portfolio-item .title {
+    margin: 16px 0 8px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+}
+
+.portfolio-item p {
+    color: grey;
+    font-size: 14px;
 }
 
 .item-description {
@@ -77,6 +159,7 @@ header {
     padding-top: 100%;
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 }
 
 .carousel-caption {
@@ -108,24 +191,125 @@ header {
 .text{
     padding:100px;
     padding-top: 0px;
-    padding-bottom:50px
+    padding-bottom:0px
 }
 
 .h1{
     font-family: "Montserrat", sans-serif;
     padding:100px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .form{
+    font-family: "Montserrat", sans-serif;
+
     padding:100px;
     padding-top:50px;
     padding-bottom: 100px;
 }
+.Contact{
+    font-family: "Montserrat", sans-serif;
+    padding:100px;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+footer {
+    height: 48px;
+    background-color: #ffffff;
+    color: white;
+    text-align: center;
+}
+
+footer .social-media-links {
+    list-style-type: none;
+    line-height: 48px;
+}
+
+footer .social-media-links li {
+  font-size: 18px;   
+  display: inline-block;
+  vertical-align: middle;
+  margin:0 16px;
+}
+
+footer .social-media-links li a{
+    text-decoration: none;
+    color: #3C484E;
+}
+
+.form-group label, .form-group textarea {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form h1 {
+    margin-bottom: .5rem;
+    padding: 20px 0;
+    line-height: 1.2;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    color: grey;
+    font-size: 14px;
+}
+
+input, textarea {
+    border: solid 1px #D9E3EA;
+    width: 420px;
+    border-radius: 4px;
+}
+
+.form-group input {
+    height: 40px;
+}
+
+.form-group textarea {
+    height: 116px;
+}
+
+input[type=Submit] {
+    background: none;
+    border: solid 2px black;
+    padding: 8px;
+}
+
+input[type=Submit]:hover {
+    background: black;
+    color: white;
+}
+
+.gallery-modal {
+    position: fixed;
+    top: 0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-in;
+    opacity: 0; 
+    visibility: hidden;
+}
+
+.gallery-modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/*.gallery-modal .image-container {
+
+} */
+
 /*Media query for desktop styles*/
 @media screen and (min-width: 768px) {
     .navbar{
-        max-width: 40%;
+        max-width: 30%;
         margin: 16px auto 0;
     }
 }

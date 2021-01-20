@@ -19,14 +19,14 @@
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <ul class="navbar-nav me-auto mb-lg-0">
-              <li class="nav-item active">
+              <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="Paige's Website.html">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="work.html">Work</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="work.html">Work</a>
               </li>
             </ul>
         </nav>
@@ -37,28 +37,28 @@
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/Work/Img35.jpg);"></div>
             <div class="item-description">
-                <p>Digital Portraiture</p>
+                <p class="title">Digital Portraiture</p>
                 <p>Digital Camera</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/Work/Img36.jpg);"></div>
             <div class="item-description">
-              <p>Portraiture</p>
+              <p class="title">Portraiture</p>
               <p>Digital Camera</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/Work/Img42.jpg);"></div>
             <div class="item-description">
-              <p>Portraiture</p>
+              <p class="title">Portraiture</p>
               <p>Digital Camera</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/Work/Img46.jpg);"></div>
             <div class="item-description">
-              <p>Portraiture</p>
+              <p class="title">Portraiture</p>
               <p>Digital Camera</p>
             </div>
           </div>
@@ -67,28 +67,28 @@
             <div class="portfolio-item">
               <div class="media-thumbnail" style="background-image: url(images/work/Img24.jpg);"></div>
               <div class="item-description">
-                  <p>Alice in Wonderland Illustration</p>
+                  <p class="title">Alice in Wonderland Illustration</p>
                   <p>Ink on Paper</p>
               </div>
             </div>
             <div class="portfolio-item">
               <div class="media-thumbnail" style="background-image: url(images/work/Img26.jpg);"></div>
               <div class="item-description">
-                  <p>Character Design</p>
+                  <p class="title">Character Design</p>
                   <p>Ink on Paper</p>
               </div>
             </div>
             <div class="portfolio-item">
               <div class="media-thumbnail" style="background-image: url(images/work/Img27.jpg);"></div>
               <div class="item-description">
-                  <p>Character Design</p>
+                  <p class="title">Character Design</p>
                   <p>Ink on Paper</p>
               </div>
             </div>
             <div class="portfolio-item">
               <div class="media-thumbnail" style="background-image: url(images/work/Img29.jpg);"></div>
               <div class="item-description">
-                  <p>Abstract Art</p>
+                  <p class="title">Abstract Art</p>
                   <p>Ink on Paper</p>
               </div>
             </div>
@@ -98,39 +98,50 @@
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/work/Img17.png);"></div>
             <div class="item-description">
-                <p>Pamphlet Design</p>
+                <p class="title">Pamphlet Design</p>
                 <p>Branding and Design</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/work/Img11.png);"></div>
             <div class="item-description">
-                <p>File Design</p>
+                <p class="title">File Design</p>
                 <p>Branding and Design</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/work/Img13.png);"></div>
             <div class="item-description">
-                <p>LP cover</p>
+                <p class="title">LP cover</p>
                 <p>Digital Illustration</p>
             </div>
           </div>
           <div class="portfolio-item">
             <div class="media-thumbnail" style="background-image: url(images/work/Img14.png);"></div>
             <div class="item-description">
-                <p>Book Cover</p>
+                <p class="title">Book Cover</p>
                 <p>Digital Design</p>
             </div>
           </div>
           
       </div>
                 <!-- work grid -->
-
+      <div class="gallery-modal">
+        <div class="close-icon"></div>
+        <div class="image-container"></div>
+      </div>
       </main>
 
       <footer>
         <!-- social media links -->
+        <ul class="social-media-links">
+          <li>
+            <a href="https://www.facebook.com/paige.farrugia/" class="fa fa-facebook"></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/paigefarrugia/" class="fa fa-instagram"></a>
+          </li>
+        </ul>
       </footer>
 
       <!-- https://cdnjs.com/libraries/-->
@@ -141,6 +152,17 @@
         $(document).ready(function(){
           $('.main-carousel').slick();
         });
+    </script>
+    <script type="text/javascript">
+      $(".portfolio-item").on("click", function() {
+          var bgurl = $(this).find(".media-thumbnail").css('background-image');
+          $(".gallery-modal").addClass("open");
+      });
+
+      $(".gallery-modal").on("click", function() {
+        $(".gallery-modal").removeClass("open");
+
+      });
     </script>
 </body>
 </html>

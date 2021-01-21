@@ -437,6 +437,10 @@ input[type=Submit]:hover {
     
     }
 }
+.no-scroll { 
+    overflow: hidden
+   }
+   
 /*Media query for desktop styles*/
 @media screen and (min-width: 768px) {
     .navbar{

@@ -111,16 +111,20 @@
             autoplay: true
           });
         });
-    
+    </script>
           // work gallery function
+          <script type="text/javascript">
           $(".portfolio-item").on("click", function() {
           var imageName = $(this).find(".media-thumbnail").attr("data-img");
           $(".gallery-modal").addClass("open");
           $(".image-container").empty().prepend('<img alt="Portfolio item preview" src="images/home/' + imageName + '" />');
+          $("body").addClass("no-scroll");
       });
 
       $(".gallery-modal").on("click", function() {
         $(".gallery-modal").removeClass("open");
+        $("body").removeClass("no-scroll");
+
 
       });
     </script>

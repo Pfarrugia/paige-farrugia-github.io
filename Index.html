@@ -19,7 +19,7 @@
        <nav class="navbar navbar-expand-lg navbar-light bg-white">
             <ul class="navbar-nav me-auto mb-lg-0">
               <li class="nav-item active">
-                <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="Paige's Website.html">Home</a>
               </li>
              <li class="nav-item">
                 <a class="nav-link" href="work.html">Work</a>
@@ -52,36 +52,28 @@
           <!-- work  -->
           <div class="portfolio-work-list">
               <div class="portfolio-item">
-                <a class="nav-link" href="work.html">
               <div class="media-thumbnail"  style="background-image: url(images/Home/Img25.jpg);"> </div>
-              </a>
                 <div class="item-description">
                     <p class="title">Illustration</p>
                     <p>Ink on Paper</p>
                 </div>
              </div>
               <div class="portfolio-item">
-                <a class="nav-link" href="work.html">
                 <div class="media-thumbnail" style="background-image: url(images/Home/Img50.jpg);"></div>
-              </a>
                 <div class="item-description">
                     <p class="title">Street Photography</p>
                     <p>Digital Camera</p>
                 </div>
             </div>
               <div class="portfolio-item">
-                <a class="nav-link" href="work.html">
                 <div class="media-thumbnail" style="background-image: url(images/Home/Img12.png);"> </div>
-              </a>
                 <div class="item-description">
                     <p class="title">Book cover</p>
                     <p>Digital Illustration</p>
               </div>
               </div>
              <div class="portfolio-item">
-              <a class="nav-link" href="work.html">
                 <div class="media-thumbnail" style="background-image: url(images/Home/Img37.jpg);"></div>
-              </a>
                 <div class="item-description">
                     <p class="title">Street Photography</p>
                     <p>Film Camera</p>
@@ -90,7 +82,11 @@
               
           </div>
       </main>
-
+                <!-- work grid gallery -->
+                <div class="gallery-modal">
+                  <div class="close-icon"></div>
+                  <div class="image-container"></div>
+                </main>
       <footer>
         <ul class="social-media-links">
           <li>
@@ -115,6 +111,19 @@
           });
         });
     </script>
+        <script type="text/javascript">
+          // work gallery function
+            $(".portfolio-item").on("click", function() {
+                var imageName = $(this).find(".media-thumbnail").attr("data-img");
+                $(".gallery-modal").addClass("open");
+                $(".image-container").empty().prepend('<img alt="Portfolio item preview" src="images/Work/' + imageName + '" />');
+            });
+      
+            $(".gallery-modal").on("click", function() {
+              $(".gallery-modal").removeClass("open");
+      
+            });
+          </script>
 </body>
 </html>
 

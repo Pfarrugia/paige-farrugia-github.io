@@ -53,28 +53,28 @@
           <!-- work  -->
           <div class="portfolio-work-list">
               <div class="portfolio-item">
-              <div class="media-thumbnail"  data-img="Img25.jpg" style="background-image: url(images/home/Img25.jpg);"></div>
+              <div class="media-thumbnail"  href="work.html" style="background-image: url(images/home/Img25.jpg);"></div>
                 <div class="item-description">
                     <p class="title">Illustration</p>
                     <p>Ink on Paper</p>
                 </div>
              </div>
               <div class="portfolio-item">
-                <div class="media-thumbnail"  data-img="Img50.jpg" style="background-image: url(images/home/Img50.jpg);"></div>
+                <div class="media-thumbnail" href="work.html"   style="background-image: url(images/home/Img50.jpg);"></div>
                 <div class="item-description">
                     <p class="title">Street Photography</p>
                     <p>Digital Camera</p>
                 </div>
             </div>
               <div class="portfolio-item">
-                <div class="media-thumbnail"  data-img="Img12.png" style="background-image: url(images/home/Img12.png);"></div>
+                <div class="media-thumbnail" href="work.html"  style="background-image: url(images/home/Img12.png);"></div>
                 <div class="item-description">
                     <p class="title">Book cover</p>
                     <p>Digital Illustration</p>
               </div>
               </div>
              <div class="portfolio-item">
-                <div class="media-thumbnail"  data-img="Img37.JPG" style="background-image: url(images/home/Img37.JPG);"></div>
+                <div class="media-thumbnail"  href="work.html"  style="background-image: url(images/home/Img37.JPG);"></div>
                 <div class="item-description">
                     <p class="title">Street Photography</p>
                     <p>Film Camera</p>
@@ -99,38 +99,8 @@
         </ul>
       </footer>
 
-      <!--  https://cdnjs.com/libraries/-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script type="text/javascript">
-        $(document).ready(function(){
-          $('.main-carousel').slick({
-            dots: true,
-            arrows: true, 
-            autoplay: true
-          });
-        });
-    
-          // work gallery function
-                    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.3.2/jquery-migrate.min.js" integrity="sha512-3fMsI1vtU2e/tVxZORSEeuMhXnT9By80xlmXlsOku7hNwZSHJjwcOBpmy+uu+fyWwGCLkMvdVbHkeoXdAzBv+w==" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="slick/slick.min.js"></script>
-    <script type="text/javascript">
-    // work gallery function
-      $(".portfolio-item").on("click", function() {
-          var imageName = $(this).find(".media-thumbnail").attr("data-img");
-          $(".gallery-modal").addClass("open");
-          $(".image-container").empty().prepend('<img alt="Portfolio item preview" src="images/work/' + imageName + '" />');
-      });
-
-      $(".gallery-modal").on("click", function() {
-        $(".gallery-modal").removeClass("open");
-
-      });
-    </script>
-
+     
+     
 </body>
 </html>
 
